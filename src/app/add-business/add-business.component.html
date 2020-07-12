@@ -1,0 +1,89 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<div id="id01" class="modal" #MyInputsDiv style="display:block">
+
+
+    <form class="modal-content" action="/action_page.php">
+
+        <div class="container" style="float: right;">
+
+            <h1 class="float">הוספת עסק</h1>
+            <br>
+
+            <hr>
+            <div class="row">
+
+                <div class="col-md-6">
+                    <label class="float"><b>תז של בעל העסק</b></label>
+                    <input type="text" [(ngModel)]="userMy.userName" name="ownerId" disabledvalue="userMy.userName">
+
+                </div>
+                <div class="col-md-6">
+                    <label class="float"><b>קוד עסק</b></label>
+                    <input type="number" value="myyy.businessID" placeholder=" business ID"
+                        [(ngModel)]="myyy.businessID" disabled name="businessID">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="float"><b>שם עסק</b></label>
+                    <input type="text" placeholder="business Name" [(ngModel)]="myyy.businessName" name="ddd">
+
+
+
+
+
+                </div>
+
+                <div class="col-md-6">
+                    <label class="float"><b>טלפון עסק</b></label>
+                    <input type="text" maxlength="10" (keydown)="onkeyDownNumber($event)"
+                        placeholder="business Phone Number" [(ngModel)]="myyy.businessPhoneNo" name="fdf">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="float"><b>כתובת עסק</b></label>
+                    <input type="text" placeholder="business Address" [(ngModel)]="myyy.businessAddress" name="hhh">
+
+                </div>
+                <div class="col-md-6">
+                    <label class="float"><b>עיר</b></label>
+                    <input id="aa" type="text " placeholder="business City" (keydown)="onkeyDownLetters($event)"
+                        [(ngModel)]="myyy.businessCity" name="ggg">
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="float"><b>האם החנות מעל 100 מטר?</b></label>
+
+                    <input type="checkbox" checked="checked" [(ngModel)]="myyy.businessSpace" name="fff">
+
+                </div>
+                <div class="col-md-6">
+                    <label class="float"><b>מספר קופות</b></label>
+                    <input type="number" placeholder="number Of Registers" required [(ngModel)]="myyy.noOfRegisters"
+                        name="kjk">
+
+                </div>
+            </div>
+
+
+            <div class="clearfix">
+                <button type="button" (click)="cancel()" style="width:120px;margin: 5px;"
+                    onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"
+                    class="btn">ביטול</button>
+
+                <button type="submit" style="width:120px;margin: 5px;" class="signupbtn" class="btn"
+                    (click)="save()">הוסף</button>
+
+            </div>
+        </div>
+    </form>
+</div>

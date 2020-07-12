@@ -1,0 +1,95 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- הצגת רשימת הטיים ליין -->
+<div class="no">
+
+    <body dir="rtl" style="background-color:transparent;">
+        <div style="margin: 25px;">
+            <h5 style="color:white;">{{business.businessName}} / {{business.businessPhoneNo}} </h5>
+            <h5 style="color:white;"> {{business.businessAddress}} / {{business.businessCity}}</h5>
+        </div>
+        <br>
+              
+
+        <div class=" container" class="vv"style="margin: 10px;">
+            <div>
+
+                <div class="row">
+                    <div class="col-md-3" >
+                        <label style="color:white;margin-right: 10px;margin-left: 10px;"><b> בחר תאריך</b></label>
+                        <input name="v" value="date" type="date" id="filters dt" required
+                            [(ngModel)]="date" style="margin:10px">
+                    </div>
+                    <div class="col-md-3">
+                        <label style="color:white; margin-right: 10px; "><b>בחר שעת כניסה</b></label>
+                        <input name="b" type="time" value="00:00" id="filters 1" placeholder="press enterance hour"
+                            style="margin: 10px;" [(ngModel)]="enteranceTime"></div>
+
+                    <div class="col-md-3">
+                        <label style="color:white;margin-right: 10px; "><b>בחר שעת יציאה</b></label>
+                        <input name="f" type="time" name="exitTime" id="filters 1" placeholder="press exit hour" required
+                            style="margin: 10px;" value="00:00" [(ngModel)]="exitTime"></div>
+                    <div class="col-md-3">
+
+
+                        <input id="myBtn" type="button" value="הצג" style="width:120px;margin-left: 8px;" class="btn"
+                            (click)="check()">
+                    </div>
+        
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+
+                    <input type="button" value="אפס" style="margin: 4px; width:120px;" class="btn"
+                        (click)="cleanFilter()">
+
+
+                    <input type="button" value="הקודם" style="margin: 4px;width:120px;" class="btn" (click)="back()">
+
+
+
+                    <!-- <input type="button" style="margin: 10px;width:120px;" class="btn" [(ngModel)]="people"
+                        value="people" (click)="NoOfPeople() ">
+
+                    <label style="color:white;"><b>כמה אנשים בחנותי?</b></label> -->
+
+
+                    <button type="submit" style="width:120px;margin:4px;" class="btn" (click)="print()">הדפס
+                        ברקוד</button>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+  
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" (click)="close()">&times;</span>
+                <b>
+                    <pre style="display: none;" class="tab"
+                        style="color: #483D8B;font-size: medium;font-family: Arial, Helvetica, sans-serif;">תז                תאריך             כניסה         יציאה</pre>
+                </b>
+
+                <app-time-line-single *ngFor="let t of MylistTimeLine" [myR]="t" (click)="ShowTimeLineSingle(t)">
+                </app-time-line-single>
+
+
+            </div>
+        </div>
+
+
+
+     
+    </body>
+</div>

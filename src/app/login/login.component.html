@@ -1,0 +1,49 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <div id="id02" class="modal" style="display:block;">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id02').style.display='none'" (click)="cancel()" class="close"
+          title="Close Modal">&times;</span>
+        <img src="./assets/log-in.png" alt="login" class="avatar">
+      </div>
+      <router-outlet id="signin" hidden="true"> </router-outlet>
+      <div class="container">
+       
+
+
+        <label style="float: right;" for="userName"><b>ת.ז. משתמש</b></label>
+        <input type="text" placeholder="הקש ת.ז. של בעל עסק" name="userName" (keydown)="onkeyDownNumber($event) "
+          [(ngModel)]="us.userName" #un>
+
+        <br />
+
+   
+          
+        
+
+        <label class="popup"  style="float: right;" for="password"><b> סיסמה - 6 תווים</b><span class="popuptext" id="myPopup">משתמש חדש במערכת -הקש סיסמה חדשה , משתמש קיים -הקש את סיסמתך</span></label>
+        <input type="password" placeholder="הקש סיסמה" name="password" required [(ngModel)]="us.userPassword">
+    
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button class="btnLogIn" type="button" onclick="document.getElementById('id02').style.display='none'"
+          style="margin:10px;" (click)="cancel()" class="cancelbtn">ביטול</button>
+
+        <button type="submit" class="btnLogIn" (click)="Check()" class="cancelbtn" style="margin:10px;">התחבר</button>
+
+        <button type="submit" (click)="New()" class="btnLogIn" style="margin:10px;" class="cancelbtn">חדש </button>
+
+        <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+      </div>
+    </form>
+  </div>
+
+
+
+</body>

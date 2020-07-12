@@ -1,0 +1,43 @@
+<div class="container" dir="rtl" style="background-color:lightgray;">
+    <div class="row">
+        <div>
+            <p style="color: #483D8B;margin-right: 1em; margin-left: 1.5em">{{myR.customerID}}</p>
+        </div>
+        <div>
+            <p style="color:#483D8B;margin-left: 1.5em"> {{myR.entranceDate| date :"dd.MM.y" }}</p>
+        </div>
+        <div>
+            <p style="color: #483D8B;margin-left: 1.5em">{{myR.entranceTime|date: "HH:MM"}}</p>
+        </div>
+        <div>
+            <p style="color: #483D8B;margin-left: 1em">{{myR.exitTime|date: "HH:MM"}}</p>
+        </div>
+        <!-- <div>
+               <p style="color: #483D8B;">{{cuss.customerPhoneNo}}</p>
+         
+        </div> -->
+
+        <!-- <div *ngIf="load">
+            <p style="color: #ffffff;">פרטי לקוח</p>
+        </div>
+        <div *ngIf="load">
+            <p style="color: #483D8B;margin-right: 1em; margin-left: 1.5em">{{myR.customerID}}</p>
+        </div>
+        <div *ngIf="load">
+
+            <p style="color:#483D8B;margin-left: 1.5em"> {{myR.entranceDate  | date :  "dd.MM.y" }}</p>
+        </div> -->
+        <!-- <div *ngIf="load">
+
+            <p style="color: #483D8B;margin-left: 1.5em">{{myR.entranceTime|date: "HH:MM"}}</p>
+        </div>
+        <div *ngIf="load">
+
+            <p style="color: #483D8B;margin-left: 1em">{{myR.exitTime|date: "HH:MM"}}</p>
+        </div> -->
+        <div *ngIf="load">
+
+            <p style="color: #483D8B;margin-left: 1em">{{cuss.customerPhoneNo}}</p>
+        </div>
+    </div>
+</div>

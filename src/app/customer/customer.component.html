@@ -1,0 +1,52 @@
+<body style="background-color: transparent;">
+    <!-- <router-outlet></router-outlet> -->
+    <div class="container" id="new ">
+
+        <h1 style="color:white;margin-left: 20px;">כניסת לקוח</h1>
+        <br>
+
+
+
+        <div class="row">
+            <div class="col-md-5">
+                <label style="color: white;margin: 6px;"><b>ת.ז. לקוח</b></label>
+                <input id="c" type="text" placeholder="הכנס תז לקוח" [(ngModel)]="MyNewCustomer.customerID">
+
+                <br>
+
+                <label style="color: white;margin: 6px;"><b>טלפון לקוח</b></label>
+              
+                <input id="c2" type="text" style="margin-top: 6px;" placeholder="הכנס מספר טלפון"
+                    [(ngModel)]="MyNewCustomer.customerPhoneNo"><br>
+
+            </div>
+
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+
+    <div class="container" style="margin-top: 60%;
+    left: 10%;">
+
+        <div class="row" style=" text-align: center;">
+            <div>
+                <input style="display: none;" style="margin:3px;" id="enter" type="button" value="כניסה" (click)="scan()" class="btn">
+
+            </div>
+            <div>
+                <input id="exit" type="button" style="margin:3px;" value="יציאה מחנות" class="btn" (click)="exit()">
+            </div>
+            <div >
+                <input id="back" type="button" style="margin:3px;" value="הקודם" class="btn" (click)="back()">
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
