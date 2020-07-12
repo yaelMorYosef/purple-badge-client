@@ -48,10 +48,10 @@ export class LoginComponent implements OnInit {
         text: 'ת.ז. משתמש הנו שדה חובה',
       })
     }
-    else if (this.us.userName.length != 9 || !(this.LegalTz(this.us.userName))) {
-      alert("ת.ז. לא תקינה")
-      this.us.userName = "";
-    }
+    // else if (this.us.userName.length != 9 || !(this.LegalTz(this.us.userName))) {
+    //   alert("ת.ז. לא תקינה")
+    //   this.us.userName = "";
+    // }
 
 
 
@@ -63,9 +63,9 @@ export class LoginComponent implements OnInit {
         text: 'סיסמא הינו שדה חובה',
       })
 
-    else if (this.us.userPassword.length != 6) {
-      alert("הקש סיסמא בעלת 6 תווים")
-    }
+    // else if (this.us.userPassword.length != 6) {
+    //   alert("הקש סיסמא בעלת 6 תווים")
+    // }
 
     else {
       this.businessUserser.GetBusinessUserById(this.us.userName).subscribe(succ => {
